@@ -7,6 +7,7 @@ rule loki
 	strings:
 		$a = "lokid: inactive client <%d> expired from list [%d]"
 		$b = "[SUPER fatal] control should NEVER fall here"
+
 	condition:
 		any of them
 }
