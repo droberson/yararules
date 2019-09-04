@@ -7,6 +7,7 @@ rule upx
 	strings:
 		$a = { 7f 45 4c 46 }
 		$b = "UPX!"
+		$c = "UPX executable packer"
 
 	condition:
 		all of them
