@@ -5,11 +5,13 @@ rule upx
 		description = "https://github.com/upx/upx"
 
 	strings:
-		$a = { 7f 45 4c 46 }
-		$b = "UPX!"
-		$c = "UPX executable packer"
+		$elf = { 7f 45 4c 46 }
+		$pe = { 4d 5a }
+
+		$a = "UPX!"
+		$b = "UPX executable packer"
 
 	condition:
-		all of them
+		($elf or $pe) and $a and $b
 }
 
