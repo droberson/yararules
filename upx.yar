@@ -5,12 +5,13 @@ rule upx
 		description = "https://github.com/upx/upx"
 
 	strings:
-		$b = "UPX!"
-		$c = "UPX executable packer"
+		$elf = { 7f 45 4c 46 }
+		$pe = { 4d 5a }
+
+		$s1 = "UPX!"
+		$s2 = "UPX executable packer"
 
 	condition:
-		uint32(0) == 0x464c457f
-		or uint16(0) == 0x4d5a
-		and all of them
+		($elf or $pe) and any of ($s*)
 }
 
