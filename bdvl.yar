@@ -14,7 +14,6 @@ rule bdvl
 
 	condition:
 		uint32(0) == 0x464c457f
-		or uint16(0) == 0x4d5a
-		and any of them
+		and all of them
 }
 
