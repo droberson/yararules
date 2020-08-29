@@ -10,7 +10,7 @@ rule upx
 
 	condition:
 		uint32(0) == 0x464c457f
-		or uint16(0) == 0x4d5a
+		or uint16(0) == 0x5a4d
 		and all of them
 }
 
