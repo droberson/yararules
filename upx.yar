@@ -9,8 +9,6 @@ rule upx
 		$s2 = "UPX executable packer"
 
 	condition:
-		uint32(0) == 0x464c457f
-		or uint16(0) == 0x5a4d
-		and all of them
+		(uint32(0) == 0x464c457f or uint16(0) == 0x5a4d) and all of them
 }
 
