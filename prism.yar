@@ -9,6 +9,6 @@ rule prism
 		$b = "I'm not root :("
 
 	condition:
-		any of them
+		all of them
 }
 
