@@ -10,6 +10,6 @@ make
 
 ## using with clamav
 ```
-clamscan --infected -r -d /path/to/directory/of/yara/rules /path/to/directory/to/scan
+clamscan --allmatch --infected -r -d /path/to/directory/of/yara/rules /path/to/directory/to/scan
 ```
 
