@@ -1,15 +1,17 @@
 # yara rules
 Here are some yara rules.
 
-The Makefile in this directory will bundle all of these up into a tarball
-for make more easy.
-
+The Makefile in this directory will bundle all of these up into a tarball.
 ```
 make
 ```
 
-## using with clamav
+## Yara CLI
 ```
-clamscan --allmatch --infected -r -d /path/to/directory/of/yara/rules /path/to/directory/to/scan
+yara /path/to/rule.yar -r /path/to/scan/
 ```
 
+## ClamAV
+```
+clamscan --allmatch --infected -r -d /path/to/rules/ /path/scan/
+```
