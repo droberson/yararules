@@ -1,4 +1,4 @@
-rule sliver_client
+rule sliver_client : c2 implant
 {
 	meta:
 		description = "Bishop Fox's Sliver C2 Implant"
@@ -12,7 +12,7 @@ rule sliver_client
 		all of them and filesize < 50MB
 }
 
-rule sliver_server
+rule sliver_server : c2
 {
 	meta:
 		description = "Bishop Fox's Sliver C2 Server"
@@ -23,5 +23,5 @@ rule sliver_server
 		$s1 = "RunSliver"
 
 	condition:
-		all of them
+		all of them and filesize > 50MB
 }
