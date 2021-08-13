@@ -1,7 +1,7 @@
 rule strange_dos_stub
 {
 	meta:
-		description = "Find strange DOS Stubs"
+		description = "Find strange DOS stubs"
 		author      = "Daniel Roberson"
 
 	strings:
