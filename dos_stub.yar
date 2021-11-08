@@ -2,7 +2,7 @@ rule atypical_dos_stub
 {
 	meta:
 		description = "Find PE files with atypical DOS stubs."
-		author      = "Daniel Roberson 932004"
+		author      = "Daniel Roberson"
 
 	strings:
 		// This program cannot be run in DOS mode.
