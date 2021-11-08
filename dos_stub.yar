@@ -1,7 +1,7 @@
 rule atypical_dos_stub
 {
 	meta:
-		description = "Find PE files with aty DOS stubs."
+		description = "Find PE files with atypical DOS stubs."
 		author      = "Daniel Roberson 932004"
 
 	strings:
