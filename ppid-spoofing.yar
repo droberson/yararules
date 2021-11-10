@@ -3,8 +3,7 @@ rule ppid_spoofing
 	meta:
 		author = "Daniel Roberson"
 		description = "Detect Windows binaries and scripts which may have implemented Parent Process ID (PPID) spoofing."
-		hash = "34f5ae67f3cfb6e0a64f2680ea59210fe17055c9360af57cc820d61f576e42c5"
-		url = "https://github.com/py7hagoras/GetSystem"
+
 
 	strings:
 		$s1 = "InitializeProcThreadAttributeList"
