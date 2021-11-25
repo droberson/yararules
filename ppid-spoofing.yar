@@ -1,23 +1,15 @@
+import "pe"
+
 rule ppid_spoofing
 {
 	meta:
 		author = "Daniel Roberson"
-		description = "Detect Windows binaries and scripts which may have implemented Parent Process ID (PPID) spoofing."
-
-
-	strings:
-		$s1 = "InitializeProcThreadAttributeList"
-		$s2 = "OpenProcess"
-		$s3 = "DuplicateHandle"
-		$s4 = "UpdateProcThreadAttribute"
-		$s5 = "CreateProcess"
-
-		/*$x1 = "InitializeProcThreadAttributeList" xor
-		$x2 = "OpenProcess" xor
-		$x3 = "DuplicateHandle" xor
-		$x4 = "UpdateProcThreadAttribute" xor
-		$x5 = "CreateProcess" xor*/
+		description = "Contains imports necessary to implement Parent Process ID (PPID) spoofing"
 
 	condition:
-		all of ($s*) //or all of ($x*)
+		uint16(0) == 0x5a4d and
+		pe.imports("kernel32.dll", "InitializeProcThreadAttributeList") and
+		pe.imports("kernel32.dll", "OpenProcess") and
+		pe.imports("kernel32.dll", "DuplicateHandle") and
+		pe.imports("kernel32.dll", "UpdateProcThreadAttribute") and (pe.imports("kernel32.dll", "CreateProcessA") or pe.imports("kernel32.dll", "CreateProcessW"))
 }
