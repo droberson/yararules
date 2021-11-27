@@ -1,5 +1,5 @@
 # yara rules
-Here are some yara rules.
+Here are some yara rules. Use at your own risk.
 
 The Makefile in this directory will bundle all of these up into a tarball.
 ```
