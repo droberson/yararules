@@ -1,0 +1,5 @@
+rule null
+{
+	condition:
+		false
+}

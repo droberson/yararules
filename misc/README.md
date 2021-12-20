@@ -1,0 +1,2 @@
+# Miscellaneous
+Miscellaneous YARA rules.
