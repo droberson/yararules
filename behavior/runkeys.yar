@@ -4,7 +4,7 @@ rule runkeys
 		description = "run key strings"
 
 	strings:
-		$ = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide ascii
+		$ = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" wide ascii nocase
 
 	condition:
 		any of them
