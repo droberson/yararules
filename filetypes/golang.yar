@@ -4,8 +4,9 @@ rule golang
 		description = "Golang binary"
 
 	strings:
+		$s1 = "Go build"
 		$go = "/go-"
 
 	condition:
-		#go > 10
+		any of ($s*) or #go > 10
 }
