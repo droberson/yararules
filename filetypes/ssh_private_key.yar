@@ -4,7 +4,7 @@ rule openssh_private_key
 		description = "OpenSSH private key"
 
 	strings:
-		$ = "-----BEGIN OPENSSH PRIVATE KEY-----"
+		$ = "BEGIN OPENSSH PRIVATE KEY"
 
 	condition:
 		all of them
