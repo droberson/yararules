@@ -1,8 +1,8 @@
-rule crypto_constants_mmh3
+rule murmurhash_constants
 {
 	meta:
 		author = "Daniel Roberson"
-		description = "mmh3 crypto constants"
+		description = "mmh3 constants"
 
 	strings:
 		$c1 = { 512d9ecc }
