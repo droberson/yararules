@@ -5,7 +5,7 @@ rule gscript
 		description = "https://github.com/gen0cide/gscript"
 
 	strings:
-		$a = "github.com/gen0cide/gscript/engine.New"
+		$ = "github.com/gen0cide/gscript"
 
 	condition:
 		any of them
