@@ -2,7 +2,7 @@ rule crypto_constants_crc32
 {
 	meta:
 		author = "Daniel Roberson"
-		description = "crc32 crypto constants"
+		description = "crc32 constants"
 
 	strings:
 		$r3 = { 00000000 }
