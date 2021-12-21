@@ -5,7 +5,7 @@ rule merlin
 		description = "https://github.com/Ne0nd0g/merlin"
 
 	strings:
-		$a = "github.com/Ne0nd0g/merlin/pkg/agent.(*Agent).Run"
+		$a = "github.com/Ne0nd0g/merlin"
 
 	condition:
 		any of them
