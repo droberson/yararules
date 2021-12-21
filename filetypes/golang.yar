@@ -5,6 +5,7 @@ rule golang
 
 	strings:
 		$s1 = "Go build"
+		$s2 = "go.build"
 		$go = "/go-"
 
 	condition:
