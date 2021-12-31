@@ -5,7 +5,6 @@ rule crypto_constants_crc32
 		description = "crc32 constants"
 
 	strings:
-		$r3 = { 00000000 }
 		$r4 = { 96300777 }
 		$r5 = { 2c610eee }
 		$r6 = { ba510999 }
