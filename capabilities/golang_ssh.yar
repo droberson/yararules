@@ -1,7 +1,7 @@
 rule golang_ssh
 {
 	meta:
-		description = "Golang binary including golang.org/x/crypto/ssh"
+		description = "Golang binary including ssh package"
 		reference = "https://pkg.go.dev/golang.org/x/crypto/ssh"
 
 	strings:
