@@ -1,7 +1,7 @@
 rule pdf
 {
 	meta:
-		description = "Find PDF files"
+		description = "PDF file"
 
 	condition:
 		uint32(0) == 0x46445025 // %PDF
