@@ -78,5 +78,6 @@ rule lnk_file_wscript
 		$wscript = "wscript" ascii wide nocase
 
 	condition:
-		$lnk_magic at 0 and $lnk_clsid at 4 $wscript
+		$lnk_magic at 0 and $lnk_clsid at 4 and $wscript
 }
+
