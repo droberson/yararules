@@ -1,3 +1,4 @@
+/*
 rule strange_dos_stub
 {
 	meta:
@@ -22,8 +23,8 @@ n		$s1 = { ?? 1f ba 0e 00 b4 09 cd ?? b8 01 4c cd ?? 54 68 69 73 20 70 72 6f 67 
 		$s4 = { 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
 
 	condition:
-n		uint16(0) == 0x5A4D and  /* MZ header */
-		uint16(64) != 0x4550 and /* PE header at 64 suggests no DOS stub */
+n		uint16(0) == 0x5A4D and  // MZ header
+		uint16(64) != 0x4550 and // PE header at 64 suggests no DOS stub
 		uint16(68) != 0x4550 and
 		uint16(72) != 0x4550 and
 		uint16(76) != 0x4550 and
@@ -32,6 +33,7 @@ n		uint16(0) == 0x5A4D and  /* MZ header */
 		     $s2 at 64 or
 		     $s3 at 64)
 }
+*/
 
 rule no_dos_stub
 {
